@@ -4,3 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+libm = "0.2.11"
+num = { version = "0.4.3", default-feature = false, feature = ["libm"] }
+num-complex = { version = "0.4.6", default-feature = false, features = ["libm"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
